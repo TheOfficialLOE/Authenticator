@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9ef83e2-e2aa-49d1-9d0e-f3db247e23ab" name="Changes" comment="workspace.xml">
+    <list default="true" id="d9ef83e2-e2aa-49d1-9d0e-f3db247e23ab" name="Changes" comment="Add .editorconfig">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tailwind.config.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.cjs" afterDir="false" />
     </list>
@@ -16,6 +16,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript JSX File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -36,12 +37,18 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/WebProjects/safe-place&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.CommitDialog&quot;,
     &quot;ts.external.directory.path&quot;: &quot;F:\\WebProjects\\safe-place\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\WebProjects\safe-place" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -52,7 +59,11 @@
       <updated>1671968731975</updated>
       <workItem from="1671968733351" duration="2679000" />
       <workItem from="1671984384509" duration="874000" />
-      <workItem from="1671985280738" duration="1806000" />
+      <workItem from="1671985280738" duration="2666000" />
+      <workItem from="1671994943276" duration="10696000" />
+      <workItem from="1672043496562" duration="2352000" />
+      <workItem from="1672054998062" duration="1268000" />
+      <workItem from="1672076002321" duration="929000" />
     </task>
     <task id="LOCAL-00001" summary="Init project with Vite">
       <created>1671970850432</created>
@@ -89,7 +100,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671985473412</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Change app font">
+      <created>1671987320420</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1671987320420</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add .editorconfig">
+      <created>1671987418270</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1671987418270</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +139,8 @@
     <MESSAGE value="Empty index.css" />
     <MESSAGE value="Init Tailwind" />
     <MESSAGE value="workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml" />
+    <MESSAGE value="Change app font" />
+    <MESSAGE value="Add .editorconfig" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add .editorconfig" />
   </component>
 </project>
