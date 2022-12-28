@@ -2,7 +2,13 @@
 const App = () => {
   return <div className="max-w-[75rem] mx-auto pt-40 flex flex-col md:flex-row justify-between flex-wrap">
     <p className="text-white text-2xl leading-9 max-w-[40rem] my-6">
-      This is my safe 💀 place.
+      You're relaxed...
+      <br/>
+      You're sublime...
+      <br/>
+      You're amazing...
+      <br/>
+      Welcome to my safe 💀 place.
     </p>
     <div className="flex flex-col mt-6">
       <button className="flex items-center justify-center text-white bg-[#47474A19] p-4 w-80 h-16 font-bold rounded-lg hover:bg-[#47474A33] hover:text-[#0ce877] transition-all duration-100">
