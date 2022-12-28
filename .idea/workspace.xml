@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9ef83e2-e2aa-49d1-9d0e-f3db247e23ab" name="Changes" comment="Some green color">
+    <list default="true" id="d9ef83e2-e2aa-49d1-9d0e-f3db247e23ab" name="Changes" comment="Update home text">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +64,7 @@
       <workItem from="1672076002321" duration="1995000" />
       <workItem from="1672082802916" duration="2903000" />
       <workItem from="1672133863263" duration="11000" />
+      <workItem from="1672222998084" duration="1489000" />
     </task>
     <task id="LOCAL-00001" summary="Init project with Vite">
       <created>1671970850432</created>
@@ -127,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672086483893</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Update home text">
+      <created>1672223261283</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1672223261283</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +165,7 @@
     <MESSAGE value="Add .editorconfig" />
     <MESSAGE value="kh" />
     <MESSAGE value="Some green color" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some green color" />
+    <MESSAGE value="Update home text" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update home text" />
   </component>
 </project>
