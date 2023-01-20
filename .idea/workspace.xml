@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9ef83e2-e2aa-49d1-9d0e-f3db247e23ab" name="Changes" comment="Some cleaning">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="d9ef83e2-e2aa-49d1-9d0e-f3db247e23ab" name="Changes" comment="ground up">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postcss.config.cjs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.cjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +71,7 @@
       <workItem from="1672390834077" duration="12000" />
       <workItem from="1673042189184" duration="294000" />
       <workItem from="1673086225566" duration="8000" />
-      <workItem from="1674209018845" duration="922000" />
+      <workItem from="1674209018845" duration="5451000" />
     </task>
     <task id="LOCAL-00001" summary="Init project with Vite">
       <created>1671970850432</created>
@@ -163,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672247249869</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="ground up">
+      <created>1674210568822</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1674210568822</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,6 +196,7 @@
     <MESSAGE value="Update home text" />
     <MESSAGE value="Some paddings and margins" />
     <MESSAGE value="Some cleaning" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some cleaning" />
+    <MESSAGE value="ground up" />
+    <option name="LAST_COMMIT_MESSAGE" value="ground up" />
   </component>
 </project>
