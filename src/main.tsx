@@ -9,12 +9,12 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <JoyUIProvider
       defaultMode="dark"
-      theme={extendTheme({cssVarPrefix: 'demo'})}
-      colorSchemeSelector="#demo_dark-mode-by-default"
-      modeStorageKey="demo_dark-mode-by-default"
+      theme={extendTheme({cssVarPrefix: ''})}
+      colorSchemeSelector="#dark-mode-by-default"
+      modeStorageKey="dark-mode-by-default"
       disableNestedContext
     >
-      <div id="demo_dark-mode-by-default">
+      <div id="dark-mode-by-default">
         <App/>
       </div>
     </JoyUIProvider>
