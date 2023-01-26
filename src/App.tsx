@@ -2,22 +2,25 @@ import * as React from "react";
 
 import {
   Box,
-  Button,
   Card,
   IconButton,
   List,
   ListItem,
   Menu,
   MenuItem,
-  Stack,
-  SvgIcon,
-  Tooltip,
   Typography
 } from "@mui/joy";
+
+/*
+* font
+* responsive
+* */
+
 
 const App = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
+  // @ts-ignore
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -67,16 +70,17 @@ const App = () => {
                 open={open}
                 onClose={handleClose}
                 aria-labelledby="positioned-demo-button"
+                sx={{
+                  borderRadius: 10,
+                }}
               >
-                <MenuItem>
-                  <Typography>
-                    Edit
-                  </Typography>
+                <MenuItem sx={{
+                  fontFamily: "Roboto"
+                }}>
+                  Edit
                 </MenuItem>
                 <MenuItem>
-                  <Typography>
-                    Delete
-                  </Typography>
+                  Delete
                 </MenuItem>
               </Menu>
             </Box>

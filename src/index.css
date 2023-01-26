@@ -8,8 +8,8 @@
 .timer {
   background: conic-gradient(rgb(9 107 222) var(--percentage), #09090d 0);
   border-radius: 50%;
-  width: 5vmin;
-  height: 5vmin;
+  width: 1.5rem;
+  height: 1.5rem;
   animation: timer 60s infinite linear;
 }
 
