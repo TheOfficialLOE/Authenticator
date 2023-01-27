@@ -2,7 +2,7 @@ import * as React from "react";
 
 import {
   Box,
-  Card,
+  Card, CircularProgress,
   IconButton,
   List,
   ListItem,
@@ -10,16 +10,34 @@ import {
   MenuItem,
   Typography
 } from "@mui/joy";
+import {useEffect, useState} from "react";
 
 /*
-* font
 * responsive
 * */
 
 
 const App = () => {
+  const [timer, setTimer] = useState<number>(10);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
+
+  useEffect(() => {
+
+    if (timer === 0)
+      setTimer(10);
+
+    const interval = setInterval(() => {
+      setTimer(timer - 1);
+    }, 1000);
+
+    return () => {
+      clearInterval(interval);
+    }
+  });
+
+  console.log(timer);
+
   // @ts-ignore
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -38,11 +56,11 @@ const App = () => {
             <Typography>
               Twitter Code
             </Typography>
-            <Typography level="h3" fontWeight="bold" color="primary">
+            <Typography level="h3" textAlign="center" fontWeight="bold" color="primary">
               123456
             </Typography>
           </Box>
-          <Box component="div" ml="auto">
+          <Box component="div" ml="auto" display="flex" flexDirection="column">
             <Box component="div">
               <IconButton size="sm" variant="plain" sx={{
                 width: 16,
@@ -72,11 +90,10 @@ const App = () => {
                 aria-labelledby="positioned-demo-button"
                 sx={{
                   borderRadius: 10,
+                  fontFamily: "Roboto"
                 }}
               >
-                <MenuItem sx={{
-                  fontFamily: "Roboto"
-                }}>
+                <MenuItem>
                   Edit
                 </MenuItem>
                 <MenuItem>
@@ -84,7 +101,12 @@ const App = () => {
                 </MenuItem>
               </Menu>
             </Box>
-            <Box component={"div"} className="timer" ml="auto" mr={0.8} mt={0.5}/>
+            {/*<Box component={"div"} className="timer" ml="auto" mr={0.8} mt={0.5}/>*/}
+            <CircularProgress determinate value={(10 - timer / 10) * 100} size="sm" sx={{
+              ml: "auto",
+              mr: 0.8,
+              mt: 0.5
+            }}/>
           </Box>
         </Card >
       </ListItem>
