@@ -13,7 +13,6 @@ import CopyIcon from "./components/icons/CopyIcon";
 import ThreeDotsIcon from "./components/icons/ThreeDotsIcon";
 import totp from "totp-generator";
 
-
 const getCurrentSeconds = () => {
   return Math.round(new Date().getTime() / 1000.0);
 };
@@ -21,9 +20,6 @@ const getCurrentSeconds = () => {
 const App = () => {
   const [updatingIn, setUpdatingIn] = useState<number>(10);
   const [token, setToken] = useState<string>();
-
-  console.log(updatingIn, token);
-
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
 
@@ -34,11 +30,6 @@ const App = () => {
         period: 10
       }));
     }, 1000);
-
-    setUpdatingIn(10 - (getCurrentSeconds() % 10));
-    setToken(totp("JBSWY3DPEHPK3PXP", {
-      period: 10
-    }));
 
     return () => {
       clearInterval(interval);
