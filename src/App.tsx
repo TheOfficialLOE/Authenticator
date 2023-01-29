@@ -11,20 +11,34 @@ import {
 import {useEffect, useState} from "react";
 import CopyIcon from "./components/icons/CopyIcon";
 import ThreeDotsIcon from "./components/icons/ThreeDotsIcon";
+import totp from "totp-generator";
+
+
+const getCurrentSeconds = () => {
+  return Math.round(new Date().getTime() / 1000.0);
+};
 
 const App = () => {
-  const [timer, setTimer] = useState<number>(10);
+  const [updatingIn, setUpdatingIn] = useState<number>(10);
+  const [token, setToken] = useState<string>();
+
+  console.log(updatingIn, token);
+
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
 
   useEffect(() => {
-
-    if (timer === 0)
-      setTimer(10);
-
     const interval = setInterval(() => {
-      setTimer(timer - 1);
+      setUpdatingIn(10 - (getCurrentSeconds() % 10));
+      setToken(totp("JBSWY3DPEHPK3PXP", {
+        period: 10
+      }));
     }, 1000);
+
+    setUpdatingIn(10 - (getCurrentSeconds() % 10));
+    setToken(totp("JBSWY3DPEHPK3PXP", {
+      period: 10
+    }));
 
     return () => {
       clearInterval(interval);
@@ -52,7 +66,7 @@ const App = () => {
             Twitter Code
           </Typography>
           <Typography level="h3" fontWeight="bold" color="primary">
-            123456
+            {token}
           </Typography>
         </Box>
         <Box component="div" ml="auto" display="flex" flexDirection="column">
@@ -93,7 +107,7 @@ const App = () => {
             </Menu>
           </Box>
           {/*<Box component={"div"} className="timer" ml="auto" mr={0.8} mt={0.5}/>*/}
-          <CircularProgress determinate value={(10 - timer / 10) * 100} size="sm" sx={{
+          <CircularProgress determinate value={(10 - updatingIn / 10) * 100} size="sm" sx={{
             ml: "auto",
             mr: 0.8,
             mt: 0.5

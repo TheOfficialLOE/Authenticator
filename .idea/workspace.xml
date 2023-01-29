@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9ef83e2-e2aa-49d1-9d0e-f3db247e23ab" name="Changes" comment="Separate icons">
+    <list default="true" id="d9ef83e2-e2aa-49d1-9d0e-f3db247e23ab" name="Changes" comment="Responsive layout">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +95,8 @@
       <workItem from="1674824544968" duration="1897000" />
       <workItem from="1674827262152" duration="1264000" />
       <workItem from="1674850411290" duration="1733000" />
-      <workItem from="1674852151232" duration="2291000" />
+      <workItem from="1674852151232" duration="2717000" />
+      <workItem from="1674911362052" duration="6662000" />
     </task>
     <task id="LOCAL-00001" summary="Init project with Vite">
       <created>1671970850432</created>
@@ -221,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674852831010</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Responsive layout">
+      <created>1674854741350</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1674854741350</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,6 +269,7 @@
     <MESSAGE value="Fix menu styles" />
     <MESSAGE value="Set timer" />
     <MESSAGE value="Separate icons" />
-    <option name="LAST_COMMIT_MESSAGE" value="Separate icons" />
+    <MESSAGE value="Responsive layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="Responsive layout" />
   </component>
 </project>
