@@ -8,7 +8,7 @@ import App from "./App";
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <JoyUIProvider
-      defaultMode="dark"
+      // defaultMode="dark"
       theme={extendTheme({
         cssVarPrefix: 'joy',
         fontFamily: {
@@ -18,8 +18,8 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
             '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
         },
       })}
-      colorSchemeSelector="#dark-mode-by-default"
-      modeStorageKey="dark-mode-by-default"
+      // colorSchemeSelector="#dark-mode-by-default"
+      // modeStorageKey="dark-mode-by-default"
       disableNestedContext
     >
       <div id="dark-mode-by-default">

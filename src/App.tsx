@@ -6,7 +6,7 @@ import {
   IconButton,
   Menu,
   MenuItem, Modal, ModalDialog,
-  Typography
+  Typography, useColorScheme
 } from "@mui/joy";
 import {useEffect, useState} from "react";
 import CopyIcon from "./components/icons/CopyIcon";
@@ -22,11 +22,16 @@ const App = () => {
   const [token, setToken] = useState<string>();
   const [anchorEl, setAnchorEl] = React.useState(null);
 
+  const { mode, setMode } = useColorScheme();
+  const [mounted, setMounted] = React.useState(false);
+
   const [isModalOpen, setModalOpen] = React.useState<boolean>(false);
 
   const open = Boolean(anchorEl);
 
   useEffect(() => {
+    setMounted(true);
+
     const interval = setInterval(() => {
       setUpdatingIn(10 - (getCurrentSeconds() % 10));
       setToken(totp("JBSWY3DPEHPK3PXP", {
@@ -47,7 +52,11 @@ const App = () => {
     setAnchorEl(null);
   };
 
-  return <Box component="div" mt={14}>
+  if (!mounted) {
+    return null;
+  }
+
+  return <Box component="div" bgcolor={(mode === "dark") ? "rgb(10, 25, 41)" : ""} height="100vh">
     <Grid container direction={{
       xs: "column",
       md: "row"
@@ -87,10 +96,6 @@ const App = () => {
               open={open}
               onClose={handleClose}
               aria-labelledby="positioned-demo-button"
-              sx={{
-                borderRadius: 10,
-                fontFamily: "Roboto"
-              }}
             >
               <MenuItem>
                 Edit
@@ -109,6 +114,14 @@ const App = () => {
         </Box>
       </Card >
     </Grid>
+    <Button
+      variant="outlined"
+      onClick={() => {
+        setMode(mode === 'light' ? 'dark' : 'light');
+      }}
+    >
+      {mode === 'light' ? 'Turn dark' : 'Turn light'}
+    </Button>
     <Button onClick={() => setModalOpen(true)}>
       new
     </Button>
