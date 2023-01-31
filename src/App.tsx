@@ -1,11 +1,11 @@
 import * as React from "react";
 
 import {
-  Box,
+  Box, Button,
   Card, CircularProgress, Grid,
   IconButton,
   Menu,
-  MenuItem,
+  MenuItem, Modal, ModalDialog,
   Typography
 } from "@mui/joy";
 import {useEffect, useState} from "react";
@@ -21,6 +21,9 @@ const App = () => {
   const [updatingIn, setUpdatingIn] = useState<number>(10);
   const [token, setToken] = useState<string>();
   const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const [isModalOpen, setModalOpen] = React.useState<boolean>(false);
+
   const open = Boolean(anchorEl);
 
   useEffect(() => {
@@ -106,6 +109,16 @@ const App = () => {
         </Box>
       </Card >
     </Grid>
+    <Button onClick={() => setModalOpen(true)}>
+      new
+    </Button>
+    <Modal open={isModalOpen} onClose={() => setModalOpen(false)}>
+      <ModalDialog>
+        <Typography>
+          kh dash
+        </Typography>
+      </ModalDialog>
+    </Modal>
   </Box>
 };
 

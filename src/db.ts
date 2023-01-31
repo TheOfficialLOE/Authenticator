@@ -1,13 +1,13 @@
 import Dexie from "dexie";
 
-type Code = {
+type ICode = {
   id: string;
   name: string;
   secret: string;
 }
 
-export class SafePlaceDB extends Dexie {
-  codes!: Dexie.Table<Code, string>;
+class SafePlaceDB extends Dexie {
+  codes!: Dexie.Table<ICode, string>;
 
   constructor() {
     super("SafePlaceDB");
@@ -16,3 +16,5 @@ export class SafePlaceDB extends Dexie {
     });
   }
 }
+
+export default new SafePlaceDB();
