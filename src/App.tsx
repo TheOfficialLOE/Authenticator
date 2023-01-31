@@ -39,6 +39,11 @@ const App = () => {
       }));
     }, 1000);
 
+    setUpdatingIn(10 - (getCurrentSeconds() % 10));
+    setToken(totp("JBSWY3DPEHPK3PXP", {
+      period: 10
+    }));
+
     return () => {
       clearInterval(interval);
     }
