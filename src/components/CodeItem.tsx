@@ -1,5 +1,5 @@
 import * as React from "react";
-import {ICode} from "../db";
+import db, {ICode} from "../db";
 import totp from "totp-generator";
 import {Box, Card, CircularProgress, IconButton, Menu, MenuItem, Typography} from "@mui/joy";
 import CopyIcon from "./icons/CopyIcon";
@@ -38,6 +38,11 @@ const CodeItem = (props: { code: ICode }) => {
   };
   const handleClose = () => {
     setAnchorEl(null);
+  };
+
+  const handleDelete = () => {
+    db.codes.delete(props.code.id);
+    handleClose();
   };
 
   return <Card row invertedColors variant="outlined" sx={{
@@ -79,7 +84,7 @@ const CodeItem = (props: { code: ICode }) => {
           <MenuItem>
             Edit
           </MenuItem>
-          <MenuItem>
+          <MenuItem onClick={handleDelete}>
             Delete
           </MenuItem>
         </Menu>
