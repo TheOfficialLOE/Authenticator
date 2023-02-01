@@ -1,56 +1,26 @@
 import * as React from "react";
 
 import {
-  Box, Button, FormControl, FormLabel,
-  Input, Modal, ModalDialog, Stack,
+  Box, Button, Modal, ModalDialog,
   Typography, useColorScheme
 } from "@mui/joy";
-import {useEffect, useState} from "react";
 import db, {ICode} from "./db";
-import {nanoid} from "nanoid";
 import CodesList from "./components/CodesList";
-
-const isBase32 = (value: string) => {
-  const regex = /^([A-Z2-7=]{8})+$/;
-  return regex.test(value);
-}
+import AddCodeForm from "./components/AddCodeForm";
 
 const App = () => {
   const {mode, setMode} = useColorScheme();
-  const [mounted, setMounted] = useState(false);
+  const [mounted, setMounted] = React.useState(false);
+  const [isModalOpen, setModalOpen] = React.useState<boolean>(false);
+  const [codes, setCodes] = React.useState<ICode[]>([]);
 
-  const [isModalOpen, setModalOpen] = useState<boolean>(false);
-
-  const [name, setName] = useState<string>("");
-  const [secret, setSecret] = useState<string>("");
-
-  const [codes, setCodes] = useState<ICode[]>([]);
-
-  useEffect(() => {
+  React.useEffect(() => {
     setMounted(true);
 
     db.codes.toArray().then(codes => {
       setCodes(codes)
     });
   });
-
-  // @ts-ignore
-  const onFormSubmit = (e) => {
-    e.preventDefault();
-
-    if (name.length >= 20 || !isBase32(secret))
-      return;
-
-    db.codes.add({
-      id: nanoid(8),
-      name,
-      secret
-    });
-
-    setModalOpen(false);
-    setName("");
-    setSecret("");
-  }
 
   if (!mounted) {
     return null;
@@ -73,29 +43,12 @@ const App = () => {
       <ModalDialog
         aria-labelledby="basic-modal-dialog-title"
         aria-describedby="basic-modal-dialog-description"
-        sx={{maxWidth: 500}}
+        sx={{ maxWidth: 500 }}
       >
         <Typography id="basic-modal-dialog-title" component="h2">
-          Create new project
+          Add new Code
         </Typography>
-        <Typography id="basic-modal-dialog-description" textColor="text.tertiary">
-          Fill in the information of the project.
-        </Typography>
-        <form
-          onSubmit={onFormSubmit}
-        >
-          <Stack spacing={2}>
-            <FormControl>
-              <FormLabel>Name</FormLabel>
-              <Input autoFocus required onChange={(value => setName(value.currentTarget.value))}/>
-            </FormControl>
-            <FormControl>
-              <FormLabel>Secret</FormLabel>
-              <Input required onChange={(value => setSecret(value.currentTarget.value))}/>
-            </FormControl>
-            <Button type="submit">Submit</Button>
-          </Stack>
-        </form>
+        <AddCodeForm setModalOpen={setModalOpen} />
       </ModalDialog>
     </Modal>
   </Box>

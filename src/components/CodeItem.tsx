@@ -4,27 +4,26 @@ import totp from "totp-generator";
 import {Box, Card, CircularProgress, IconButton, Menu, MenuItem, Typography} from "@mui/joy";
 import CopyIcon from "./icons/CopyIcon";
 import ThreeDotsIcon from "./icons/ThreeDotsIcon";
-import {useState} from "react";
 
 const getCurrentSeconds = () => {
   return Math.round(new Date().getTime() / 1000.0);
 };
 const CodeItem = (props: { code: ICode }) => {
   const [updatingIn, setUpdatingIn] = React.useState<number>(10);
-  const [token, setToken] = React.useState<string>("");
-  const [anchorEl, setAnchorEl] = useState(null);
-  const open = Boolean(anchorEl);
+  const [passCode, setPassCode] = React.useState<string>("");
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const isAnchorElOpen = Boolean(anchorEl);
 
   React.useEffect(() => {
     const interval = setInterval(() => {
       setUpdatingIn(10 - (getCurrentSeconds() % 10));
-      setToken(totp(props.code.secret, {
+      setPassCode(totp(props.code.secret, {
         period: 10
       }));
     }, 1000);
 
     setUpdatingIn(10 - (getCurrentSeconds() % 10));
-    setToken(totp(props.code.secret, {
+    setPassCode(totp(props.code.secret, {
       period: 10
     }));
 
@@ -49,7 +48,7 @@ const CodeItem = (props: { code: ICode }) => {
         {props.code.name}
       </Typography>
       <Typography level="h3" fontWeight="bold" color="primary">
-        {token}
+        {passCode}
       </Typography>
     </Box>
     <Box component="div" ml="auto" display="flex" flexDirection="column">
@@ -65,7 +64,7 @@ const CodeItem = (props: { code: ICode }) => {
           height: 16
         }} onClick={handleClick}
                     id="positioned-demo-button"
-                    aria-controls={open ? 'positioned-demo-menu' : undefined}
+                    aria-controls={isAnchorElOpen ? 'positioned-demo-menu' : undefined}
                     aria-haspopup="true"
         >
           <ThreeDotsIcon />
@@ -73,7 +72,7 @@ const CodeItem = (props: { code: ICode }) => {
         <Menu
           id="positioned-demo-menu"
           anchorEl={anchorEl}
-          open={open}
+          open={isAnchorElOpen}
           onClose={handleClose}
           aria-labelledby="positioned-demo-button"
         >

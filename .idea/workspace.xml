@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9ef83e2-e2aa-49d1-9d0e-f3db247e23ab" name="Changes" comment="Initiate code after interval" />
+    <list default="true" id="d9ef83e2-e2aa-49d1-9d0e-f3db247e23ab" name="Changes" comment="Separate some components">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CodeItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CodeItem.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,6 +104,8 @@
       <workItem from="1675169096088" duration="685000" />
       <workItem from="1675171166306" duration="3045000" />
       <workItem from="1675191973749" duration="1858000" />
+      <workItem from="1675265335639" duration="3679000" />
+      <workItem from="1675271646320" duration="877000" />
     </task>
     <task id="LOCAL-00001" summary="Init project with Vite">
       <created>1671970850432</created>
@@ -276,7 +282,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675193826640</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Add and map codes">
+      <created>1675267924018</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1675267924018</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Separate some components">
+      <created>1675268991825</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1675268991825</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,8 +316,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Init project with Vite" />
-    <MESSAGE value="Remove unuseful stuff" />
     <MESSAGE value="Empty index.css" />
     <MESSAGE value="Init Tailwind" />
     <MESSAGE value="workspace.xml" />
@@ -321,6 +339,8 @@
     <MESSAGE value="Add simple modal" />
     <MESSAGE value="Toggle dark mode" />
     <MESSAGE value="Initiate code after interval" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initiate code after interval" />
+    <MESSAGE value="Add and map codes" />
+    <MESSAGE value="Separate some components" />
+    <option name="LAST_COMMIT_MESSAGE" value="Separate some components" />
   </component>
 </project>
