@@ -1,6 +1,6 @@
 import Dexie from "dexie";
 
-type ICode = {
+export type ICode = {
   id: string;
   name: string;
   secret: string;
