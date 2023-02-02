@@ -1,9 +1,11 @@
 import * as React from "react";
-import db, {ICode} from "../db";
+import db, { ICode } from "../db";
 import totp from "totp-generator";
-import {Box, Card, CircularProgress, IconButton, Menu, MenuItem, Typography} from "@mui/joy";
+import { Box, Card, CircularProgress, IconButton, Menu, MenuItem, Typography } from "@mui/joy";
 import CopyIcon from "./icons/CopyIcon";
 import ThreeDotsIcon from "./icons/ThreeDotsIcon";
+import { useContext } from "react";
+import { ModalContext } from "../ModalContext";
 
 const getCurrentSeconds = () => {
   return Math.round(new Date().getTime() / 1000.0);
@@ -13,6 +15,9 @@ const CodeItem = (props: { code: ICode }) => {
   const [passCode, setPassCode] = React.useState<string>("");
   const [anchorEl, setAnchorEl] = React.useState(null);
   const isAnchorElOpen = Boolean(anchorEl);
+  const {
+    openModalForEditing
+  } = useContext(ModalContext);
 
   React.useEffect(() => {
     const interval = setInterval(() => {
@@ -36,8 +41,13 @@ const CodeItem = (props: { code: ICode }) => {
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
+
   const handleClose = () => {
     setAnchorEl(null);
+  };
+
+  const handleEdit = () => {
+    openModalForEditing(props.code);
   };
 
   const handleDelete = () => {
@@ -62,7 +72,7 @@ const CodeItem = (props: { code: ICode }) => {
           width: 16,
           height: 16
         }}>
-          <CopyIcon />
+          <CopyIcon/>
         </IconButton>
         <IconButton size="sm" variant="plain" sx={{
           width: 16,
@@ -81,7 +91,7 @@ const CodeItem = (props: { code: ICode }) => {
           onClose={handleClose}
           aria-labelledby="positioned-demo-button"
         >
-          <MenuItem>
+          <MenuItem onClick={handleEdit}>
             Edit
           </MenuItem>
           <MenuItem onClick={handleDelete}>
@@ -96,7 +106,7 @@ const CodeItem = (props: { code: ICode }) => {
         mt: 0.5
       }}/>
     </Box>
-  </Card >
+  </Card>
 };
 
 export default CodeItem;

@@ -1,13 +1,13 @@
-import {ICode} from "../db";
+import { ICode } from "../db";
 import CodeItem from "./CodeItem";
-import {Grid} from "@mui/joy";
+import { Grid } from "@mui/joy";
 
 const CodesList = (props: { codes: ICode[] }) => {
   return <Grid container direction={{
     xs: "column",
     md: "row"
   }}>
-    { props.codes.map(code => <CodeItem code={code} />) }
+    {props.codes.map(code => <CodeItem code={code} />)}
   </Grid>
 };
 

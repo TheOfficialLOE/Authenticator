@@ -1,18 +1,21 @@
 import * as React from "react";
+import { useContext } from "react";
 
-import {
-  Box, Button, Modal, ModalDialog,
-  Typography, useColorScheme
-} from "@mui/joy";
-import db, {ICode} from "./db";
+import { Box, Button, Modal, ModalDialog, Typography, useColorScheme } from "@mui/joy";
+import db, { ICode } from "./db";
 import CodesList from "./components/CodesList";
-import AddCodeForm from "./components/AddCodeForm";
+import CodeForm from "./components/CodeForm";
+import { ModalContext, ModalState } from "./ModalContext";
 
 const App = () => {
-  const {mode, setMode} = useColorScheme();
+  const { mode, setMode } = useColorScheme();
   const [mounted, setMounted] = React.useState(false);
-  const [isModalOpen, setModalOpen] = React.useState<boolean>(false);
   const [codes, setCodes] = React.useState<ICode[]>([]);
+  const {
+    modalState,
+    closeModal,
+    openModalForAdding,
+  } = useContext(ModalContext);
 
   React.useEffect(() => {
     setMounted(true);
@@ -36,10 +39,10 @@ const App = () => {
     >
       {mode === 'light' ? 'Turn dark' : 'Turn light'}
     </Button>
-    <Button onClick={() => setModalOpen(true)}>
+    <Button onClick={openModalForAdding}>
       new
     </Button>
-    <Modal open={isModalOpen} onClose={() => setModalOpen(false)}>
+    <Modal open={modalState === ModalState.Adding || modalState === ModalState.Editing} onClose={closeModal}>
       <ModalDialog
         aria-labelledby="basic-modal-dialog-title"
         aria-describedby="basic-modal-dialog-description"
@@ -48,7 +51,7 @@ const App = () => {
         <Typography id="basic-modal-dialog-title" component="h2">
           Add new Code
         </Typography>
-        <AddCodeForm setModalOpen={setModalOpen} />
+        <CodeForm />
       </ModalDialog>
     </Modal>
   </Box>

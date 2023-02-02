@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import { CssVarsProvider as JoyUIProvider, extendTheme } from "@mui/joy";
 import App from "./App";
+import ModalProvider from "./ModalProvider";
 
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
@@ -23,7 +24,9 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
       disableNestedContext
     >
       <div id="dark-mode-by-default">
-        <App/>
+        <ModalProvider>
+          <App/>
+        </ModalProvider>
       </div>
     </JoyUIProvider>
   </React.StrictMode>,
