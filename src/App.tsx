@@ -1,11 +1,12 @@
 import * as React from "react";
 import { useContext } from "react";
 
-import { Box, Button, Modal, ModalDialog, Typography, useColorScheme } from "@mui/joy";
+import { Box, Button, IconButton, Modal, ModalDialog, Typography, useColorScheme } from "@mui/joy";
 import db, { ICode } from "./db";
 import CodesList from "./components/CodesList";
 import CodeForm from "./components/CodeForm";
 import { ModalContext, ModalState } from "./ModalContext";
+import AddIcon from "./components/icons/AddIcon";
 
 const App = () => {
   const { mode, setMode } = useColorScheme();
@@ -39,9 +40,14 @@ const App = () => {
     >
       {mode === 'light' ? 'Turn dark' : 'Turn light'}
     </Button>
-    <Button onClick={openModalForAdding}>
-      new
-    </Button>
+    <IconButton variant="plain" onClick={openModalForAdding} sx={{
+      position: "absolute",
+      bottom: 30,
+      right: 30,
+      borderRadius: 999
+    }}>
+      <AddIcon />
+    </IconButton>
     <Modal open={modalState === ModalState.Adding || modalState === ModalState.Editing} onClose={closeModal}>
       <ModalDialog
         aria-labelledby="basic-modal-dialog-title"
