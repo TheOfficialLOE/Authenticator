@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9ef83e2-e2aa-49d1-9d0e-f3db247e23ab" name="Changes" comment="Add delete functionality">
+    <list default="true" id="d9ef83e2-e2aa-49d1-9d0e-f3db247e23ab" name="Changes" comment="Handle update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AddCodeForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CodeForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/CodeItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CodeItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CodesList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CodesList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/db.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +17,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -113,7 +108,8 @@
       <workItem from="1675274161081" duration="659000" />
       <workItem from="1675329343095" duration="1256000" />
       <workItem from="1675330608216" duration="2688000" />
-      <workItem from="1675337611410" duration="1491000" />
+      <workItem from="1675337611410" duration="1962000" />
+      <workItem from="1675414332942" duration="1547000" />
     </task>
     <task id="LOCAL-00001" summary="Init project with Vite">
       <created>1671970850432</created>
@@ -318,7 +314,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675274412640</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Handle update">
+      <created>1675339341864</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1675339341864</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,7 +341,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="workspace.xml" />
     <MESSAGE value="Change app font" />
     <MESSAGE value="Add .editorconfig" />
     <MESSAGE value="kh" />
@@ -363,6 +365,7 @@
     <MESSAGE value="Separate some components" />
     <MESSAGE value="Add one more component + some refactoring" />
     <MESSAGE value="Add delete functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add delete functionality" />
+    <MESSAGE value="Handle update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Handle update" />
   </component>
 </project>

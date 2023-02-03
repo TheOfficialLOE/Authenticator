@@ -1,11 +1,13 @@
 import * as React from "react";
 import db, { ICode } from "../db";
 import totp from "totp-generator";
-import { Box, Card, CircularProgress, IconButton, Menu, MenuItem, Typography } from "@mui/joy";
+import { Box, Card, CircularProgress, IconButton, ListItemDecorator, Menu, MenuItem, Typography } from "@mui/joy";
 import CopyIcon from "./icons/CopyIcon";
 import ThreeDotsIcon from "./icons/ThreeDotsIcon";
 import { useContext } from "react";
 import { ModalContext } from "../ModalContext";
+import DeleteIcon from "./icons/DeleteIcon";
+import EditIcon from "./icons/EditIcon";
 
 const getCurrentSeconds = () => {
   return Math.round(new Date().getTime() / 1000.0);
@@ -78,23 +80,29 @@ const CodeItem = (props: { code: ICode }) => {
           width: 16,
           height: 16
         }} onClick={handleClick}
-                    id="positioned-demo-button"
-                    aria-controls={isAnchorElOpen ? 'positioned-demo-menu' : undefined}
+                    id="positioned-button"
+                    aria-controls={isAnchorElOpen ? 'positioned-menu' : undefined}
                     aria-haspopup="true"
         >
           <ThreeDotsIcon />
         </IconButton>
         <Menu
-          id="positioned-demo-menu"
+          id="positioned-menu"
           anchorEl={anchorEl}
           open={isAnchorElOpen}
           onClose={handleClose}
-          aria-labelledby="positioned-demo-button"
+          aria-labelledby="positioned-button"
         >
           <MenuItem onClick={handleEdit}>
-            Edit
+            <ListItemDecorator>
+              <EditIcon />
+            </ListItemDecorator>{' '}
+            Edit Code
           </MenuItem>
-          <MenuItem onClick={handleDelete}>
+          <MenuItem onClick={handleDelete} variant="soft" color="danger">
+            <ListItemDecorator sx={{ color: 'inherit' }}>
+              <DeleteIcon />
+            </ListItemDecorator>{' '}
             Delete
           </MenuItem>
         </Menu>
