@@ -12,6 +12,10 @@ import EditIcon from "./icons/EditIcon";
 const getCurrentSeconds = () => {
   return Math.round(new Date().getTime() / 1000.0);
 };
+
+const copyToClipBoard = async (value: string) => {
+  await navigator.clipboard.writeText(value);
+};
 const CodeItem = (props: { code: ICode }) => {
   const [updatingIn, setUpdatingIn] = React.useState<number>(10);
   const [passCode, setPassCode] = React.useState<string>("");
@@ -44,6 +48,10 @@ const CodeItem = (props: { code: ICode }) => {
     setAnchorEl(event.currentTarget);
   };
 
+  const handleCopy = () => {
+    copyToClipBoard(passCode);
+  };
+
   const handleClose = () => {
     setAnchorEl(null);
   };
@@ -73,7 +81,7 @@ const CodeItem = (props: { code: ICode }) => {
         <IconButton size="sm" variant="plain" sx={{
           width: 16,
           height: 16
-        }}>
+        }} onClick={handleCopy}>
           <CopyIcon/>
         </IconButton>
         <IconButton size="sm" variant="plain" sx={{
