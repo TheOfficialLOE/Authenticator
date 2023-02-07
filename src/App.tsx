@@ -1,5 +1,5 @@
-import { useState, useEffect, useContext } from "react";
-import { Box, IconButton, Modal, ModalDialog, Typography, useColorScheme } from "@mui/joy";
+import React, { useState, useEffect, useContext } from "react";
+import { Box, Button, IconButton, Modal, ModalDialog, Typography, useColorScheme } from "@mui/joy";
 import db, { ICode } from "./db";
 import CodesList from "./components/CodesList";
 import CodeForm from "./components/CodeForm";
@@ -7,6 +7,8 @@ import { ModalContext, ModalState } from "./ModalContext";
 import AddIcon from "./components/icons/AddIcon";
 import LightIcon from "./components/icons/LightIcon";
 import DarkIcon from "./components/icons/DarkIcon";
+import { toast, ToastContainer } from "react-toastify";
+import MyToastContainer from "./components/MyToastContainer";
 
 const App = () => {
   const { mode, setMode } = useColorScheme();
@@ -61,16 +63,19 @@ const App = () => {
       <AddIcon />
     </IconButton>
     <Modal open={modalState === ModalState.Adding || modalState === ModalState.Editing} onClose={closeModal}>
-      <ModalDialog
-        aria-labelledby="basic-modal-dialog-title"
-        aria-describedby="basic-modal-dialog-description"
-        sx={{ maxWidth: 500 }}
-      >
-        <Typography id="basic-modal-dialog-title" component="h2">
-          Add new Code
-        </Typography>
-        <CodeForm />
-      </ModalDialog>
+      <>
+        <ModalDialog
+          aria-labelledby="basic-modal-dialog-title"
+          aria-describedby="basic-modal-dialog-description"
+          sx={{ maxWidth: 500 }}
+        >
+          <Typography id="basic-modal-dialog-title" component="h2">
+            Add new Code
+          </Typography>
+          <CodeForm />
+        </ModalDialog>
+        <MyToastContainer />
+      </>
     </Modal>
   </Box>
 };

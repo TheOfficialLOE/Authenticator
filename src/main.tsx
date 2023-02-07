@@ -4,6 +4,7 @@ import './index.css';
 import { CssVarsProvider as JoyUIProvider, extendTheme } from "@mui/joy";
 import App from "./App";
 import ModalProvider from "./ModalProvider";
+import MyToastContainer from "./components/MyToastContainer";
 
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
@@ -29,5 +30,6 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         </ModalProvider>
       </div>
     </JoyUIProvider>
+    <MyToastContainer />
   </React.StrictMode>,
 )

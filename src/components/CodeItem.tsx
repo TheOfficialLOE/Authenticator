@@ -7,6 +7,7 @@ import ThreeDotsIcon from "./icons/ThreeDotsIcon";
 import { ModalContext } from "../ModalContext";
 import DeleteIcon from "./icons/DeleteIcon";
 import EditIcon from "./icons/EditIcon";
+import { toast } from "react-toastify";
 
 const getCurrentSeconds = () => {
   return Math.round(new Date().getTime() / 1000.0);
@@ -49,6 +50,7 @@ const CodeItem = (props: { code: ICode }) => {
 
   const handleCopy = () => {
     copyToClipBoard(passCode);
+    toast.success("Code copied to clipboard.");
   };
 
   const handleClose = () => {
