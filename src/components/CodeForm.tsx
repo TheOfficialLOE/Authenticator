@@ -1,5 +1,4 @@
-import * as React from "react";
-import { useContext } from "react";
+import { useContext, FormEvent } from "react";
 import { Button, FormControl, FormLabel, Input, Stack } from "@mui/joy";
 import db from "../db";
 import { nanoid } from "nanoid";
@@ -21,7 +20,7 @@ const CodeForm = () => {
     closeModal
   } = useContext(ModalContext);
 
-  const onFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const onFormSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (name.length >= 20 || !isBase32(secret))

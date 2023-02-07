@@ -1,10 +1,9 @@
-import * as React from "react";
+import { useState, useEffect, useContext } from "react";
 import db, { ICode } from "../db";
 import totp from "totp-generator";
 import { Box, Card, CircularProgress, IconButton, ListItemDecorator, Menu, MenuItem, Typography } from "@mui/joy";
 import CopyIcon from "./icons/CopyIcon";
 import ThreeDotsIcon from "./icons/ThreeDotsIcon";
-import { useContext } from "react";
 import { ModalContext } from "../ModalContext";
 import DeleteIcon from "./icons/DeleteIcon";
 import EditIcon from "./icons/EditIcon";
@@ -17,15 +16,15 @@ const copyToClipBoard = async (value: string) => {
   await navigator.clipboard.writeText(value);
 };
 const CodeItem = (props: { code: ICode }) => {
-  const [updatingIn, setUpdatingIn] = React.useState<number>(10);
-  const [passCode, setPassCode] = React.useState<string>("");
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [updatingIn, setUpdatingIn] = useState<number>(10);
+  const [passCode, setPassCode] = useState<string>("");
+  const [anchorEl, setAnchorEl] = useState(null);
   const isAnchorElOpen = Boolean(anchorEl);
   const {
     openModalForEditing
   } = useContext(ModalContext);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const interval = setInterval(() => {
       setUpdatingIn(10 - (getCurrentSeconds() % 10));
       setPassCode(totp(props.code.secret, {

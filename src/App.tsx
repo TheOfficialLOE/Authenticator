@@ -1,7 +1,5 @@
-import * as React from "react";
-import { useContext } from "react";
-
-import { Box, Button, IconButton, Modal, ModalDialog, Typography, useColorScheme } from "@mui/joy";
+import { useState, useEffect, useContext } from "react";
+import { Box, IconButton, Modal, ModalDialog, Typography, useColorScheme } from "@mui/joy";
 import db, { ICode } from "./db";
 import CodesList from "./components/CodesList";
 import CodeForm from "./components/CodeForm";
@@ -12,15 +10,15 @@ import DarkIcon from "./components/icons/DarkIcon";
 
 const App = () => {
   const { mode, setMode } = useColorScheme();
-  const [mounted, setMounted] = React.useState(false);
-  const [codes, setCodes] = React.useState<ICode[]>([]);
+  const [mounted, setMounted] = useState(false);
+  const [codes, setCodes] = useState<ICode[]>([]);
   const {
     modalState,
     closeModal,
     openModalForAdding,
   } = useContext(ModalContext);
 
-  React.useEffect(() => {
+  useEffect(() => {
     setMounted(true);
 
     db.codes.toArray().then(codes => {
