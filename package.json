@@ -1,12 +1,15 @@
 {
   "name": "safe-place",
+  "homepage": "https://TheOfficialLOE.github.io/Safe-Place",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
@@ -23,6 +26,7 @@
     "@types/react-dom": "^18.0.9",
     "@types/totp-generator": "^0.0.4",
     "@vitejs/plugin-react": "^3.0.0",
+    "gh-pages": "^5.0.0",
     "typescript": "^4.9.3",
     "vite": "^4.0.0"
   }
