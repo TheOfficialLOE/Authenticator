@@ -56,8 +56,8 @@ const App = () => {
       </IconButton>
     </Box>
     <CodesList codes={codes}/>
-    <IconButton variant="plain" onClick={openModalForAdding} sx={{
-      position: "absolute",
+    <IconButton variant="solid" onClick={openModalForAdding} sx={{
+      position: "fixed",
       bottom: 30,
       right: 30,
       borderRadius: 999
