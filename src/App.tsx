@@ -7,8 +7,8 @@ import { ModalContext, ModalState } from "./ModalContext";
 import AddIcon from "./components/icons/AddIcon";
 import LightIcon from "./components/icons/LightIcon";
 import DarkIcon from "./components/icons/DarkIcon";
-import { toast, ToastContainer } from "react-toastify";
 import MyToastContainer from "./components/MyToastContainer";
+import createBreakpoints from "@mui/system/createTheme/createBreakpoints";
 
 const App = () => {
   const { mode, setMode } = useColorScheme();
@@ -19,6 +19,8 @@ const App = () => {
     closeModal,
     openModalForAdding,
   } = useContext(ModalContext);
+
+  const breakpoints = createBreakpoints({  });
 
   useEffect(() => {
     setMounted(true);
@@ -32,7 +34,7 @@ const App = () => {
     return null;
   }
 
-  return <Box component="div" bgcolor={(mode === "dark") ? "rgb(10, 25, 41)" : ""} height="100vh">
+  return <Box component="div" bgcolor={(mode === "dark") ? "rgb(10, 25, 41)" : ""} minHeight="100vh">
     <Box component="div" p={8} display="flex" flexDirection="row" justifyContent="center" alignItems="center">
       <Typography level="h1">
         Safe Place
