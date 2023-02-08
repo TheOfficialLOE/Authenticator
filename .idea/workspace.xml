@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9ef83e2-e2aa-49d1-9d0e-f3db247e23ab" name="Changes" comment="Show some toasts">
+    <list default="true" id="d9ef83e2-e2aa-49d1-9d0e-f3db247e23ab" name="Changes" comment="Responsive sizing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CodeItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CodeItem.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/CodesList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CodesList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +113,8 @@
       <workItem from="1675414332942" duration="5367000" />
       <workItem from="1675423574449" duration="2699000" />
       <workItem from="1675791641793" duration="10204000" />
-      <workItem from="1675870094535" duration="1715000" />
+      <workItem from="1675870094535" duration="1882000" />
+      <workItem from="1675874422550" duration="834000" />
     </task>
     <task id="LOCAL-00001" summary="Init project with Vite">
       <created>1671970850432</created>
@@ -374,7 +375,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675802107358</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Responsive sizing">
+      <created>1675871973920</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1675871973920</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -394,7 +402,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="ground up" />
     <MESSAGE value="set default dark theme" />
     <MESSAGE value="finish design for mobila" />
     <MESSAGE value="Fix menu styles" />
@@ -419,6 +426,7 @@
     <MESSAGE value="Copy code to clipboard" />
     <MESSAGE value="Refactor imports from React library" />
     <MESSAGE value="Show some toasts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Show some toasts" />
+    <MESSAGE value="Responsive sizing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Responsive sizing" />
   </component>
 </project>
