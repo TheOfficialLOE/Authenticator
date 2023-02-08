@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9ef83e2-e2aa-49d1-9d0e-f3db247e23ab" name="Changes" comment="Refactor imports from React library">
+    <list default="true" id="d9ef83e2-e2aa-49d1-9d0e-f3db247e23ab" name="Changes" comment="Show some toasts">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CodeForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CodeForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/CodeItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CodeItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CodesList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CodesList.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +112,8 @@
       <workItem from="1675337611410" duration="1962000" />
       <workItem from="1675414332942" duration="5367000" />
       <workItem from="1675423574449" duration="2699000" />
-      <workItem from="1675791641793" duration="9522000" />
+      <workItem from="1675791641793" duration="10204000" />
+      <workItem from="1675870094535" duration="1715000" />
     </task>
     <task id="LOCAL-00001" summary="Init project with Vite">
       <created>1671970850432</created>
@@ -370,7 +367,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675796084507</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Show some toasts">
+      <created>1675802107358</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1675802107358</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -390,7 +394,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Some cleaning" />
     <MESSAGE value="ground up" />
     <MESSAGE value="set default dark theme" />
     <MESSAGE value="finish design for mobila" />
@@ -415,6 +418,7 @@
     <MESSAGE value="Some deployment" />
     <MESSAGE value="Copy code to clipboard" />
     <MESSAGE value="Refactor imports from React library" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor imports from React library" />
+    <MESSAGE value="Show some toasts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Show some toasts" />
   </component>
 </project>

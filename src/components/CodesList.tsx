@@ -3,7 +3,7 @@ import CodeItem from "./CodeItem";
 import { Grid } from "@mui/joy";
 
 const CodesList = (props: { codes: ICode[] }) => {
-  return <Grid container direction={{
+  return <Grid container justifyContent="space-between" direction={{
     xs: "column",
     md: "row"
   }}>

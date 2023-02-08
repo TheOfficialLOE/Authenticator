@@ -8,6 +8,7 @@ import { ModalContext } from "../ModalContext";
 import DeleteIcon from "./icons/DeleteIcon";
 import EditIcon from "./icons/EditIcon";
 import { toast } from "react-toastify";
+import createBreakpoints from "@mui/system/createTheme/createBreakpoints";
 
 const getCurrentSeconds = () => {
   return Math.round(new Date().getTime() / 1000.0);
@@ -24,6 +25,8 @@ const CodeItem = (props: { code: ICode }) => {
   const {
     openModalForEditing
   } = useContext(ModalContext);
+
+  const breakPoints = createBreakpoints({  });
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -67,7 +70,10 @@ const CodeItem = (props: { code: ICode }) => {
   };
 
   return <Card row invertedColors variant="outlined" sx={{
-    m: 1
+    m: 1,
+    [breakPoints.up("md")]: {
+      maxWidth: 240
+    }
   }}>
     <Box component="div">
       <Typography>
