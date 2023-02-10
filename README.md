@@ -35,7 +35,10 @@ yarn dev
 
 4. Open your browser at http://localhost:5173/ to view the app
 
+## Security
 
- ## Contributing  
+All data is stored locally on your device, so it can't be accessed by anyone else.
 
- Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are greatly appreciated!
+## Contributing  
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are greatly appreciated!
