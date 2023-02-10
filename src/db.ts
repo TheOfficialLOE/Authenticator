@@ -6,15 +6,15 @@ export interface ICode {
   secret: string;
 }
 
-class SafePlaceDB extends Dexie {
+class AuthenticatorDB extends Dexie {
   codes!: Dexie.Table<ICode, string>;
 
   constructor() {
-    super("SafePlaceDB");
+    super("AuthenticatorDB");
     this.version(1).stores({
       codes: "id, name, secret"
     });
   }
 }
 
-export default new SafePlaceDB();
+export default new AuthenticatorDB();

@@ -1,6 +1,6 @@
 {
-  "name": "safe-place",
-  "homepage": "https://TheOfficialLOE.github.io/Safe-Place",
+  "name": "authenticator",
+  "homepage": "https://TheOfficialLOE.github.io/Authenticator",
   "private": true,
   "version": "0.0.0",
   "type": "module",
