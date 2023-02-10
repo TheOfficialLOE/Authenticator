@@ -10,6 +10,9 @@ import EditIcon from "./icons/EditIcon";
 import { toast } from "react-toastify";
 import createBreakpoints from "@mui/system/createTheme/createBreakpoints";
 
+const DURATION = 60;
+
+
 const getCurrentSeconds = () => {
   return Math.round(new Date().getTime() / 1000.0);
 };
@@ -18,7 +21,7 @@ const copyToClipBoard = async (value: string) => {
   await navigator.clipboard.writeText(value);
 };
 const CodeItem = (props: { code: ICode }) => {
-  const [updatingIn, setUpdatingIn] = useState<number>(10);
+  const [updatingIn, setUpdatingIn] = useState<number>(DURATION);
   const [passCode, setPassCode] = useState<string>("");
   const [anchorEl, setAnchorEl] = useState(null);
   const isAnchorElOpen = Boolean(anchorEl);
@@ -30,15 +33,15 @@ const CodeItem = (props: { code: ICode }) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setUpdatingIn(10 - (getCurrentSeconds() % 10));
+      setUpdatingIn(DURATION - (getCurrentSeconds() % DURATION));
       setPassCode(totp(props.code.secret, {
-        period: 10
+        period: DURATION
       }));
     }, 1000);
 
-    setUpdatingIn(10 - (getCurrentSeconds() % 10));
+    setUpdatingIn(DURATION - (getCurrentSeconds() % DURATION));
     setPassCode(totp(props.code.secret, {
-      period: 10
+      period: DURATION
     }));
 
     return () => {
@@ -123,7 +126,7 @@ const CodeItem = (props: { code: ICode }) => {
         </Menu>
       </Box>
       {/*<Box component={"div"} className="timer" ml="auto" mr={0.8} mt={0.5}/>*/}
-      <CircularProgress determinate value={(10 - updatingIn / 10) * 100} size="sm" sx={{
+      <CircularProgress determinate value={(DURATION - updatingIn / DURATION) * 100} size="sm" sx={{
         ml: "auto",
         mr: 0.8,
         mt: 0.5

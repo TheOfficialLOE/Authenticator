@@ -37,7 +37,7 @@ const App = () => {
   return <Box component="div" bgcolor={(mode === "dark") ? "rgb(10, 25, 41)" : ""} minHeight="100vh">
     <Box component="div" p={8} display="flex" flexDirection="row" justifyContent="center" alignItems="center">
       <Typography level="h1">
-        Safe Place
+        Authenticator
       </Typography>
       <IconButton
         variant="outlined"
