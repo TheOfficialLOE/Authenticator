@@ -72,7 +72,7 @@ const CodeItem = (props: { code: ICode }) => {
   return <Card row invertedColors variant="outlined" sx={{
     m: 1,
     [breakPoints.up("md")]: {
-      maxWidth: 240
+      width: 240
     }
   }}>
     <Box component="div">
@@ -83,7 +83,7 @@ const CodeItem = (props: { code: ICode }) => {
         {passCode}
       </Typography>
     </Box>
-    <Box component="div" ml="auto" display="flex" flexDirection="column">
+    <Box component="div" ml="auto" mt={-0.5} display="flex" flexDirection="column">
       <Box component="div">
         <IconButton size="sm" variant="plain" sx={{
           width: 16,
