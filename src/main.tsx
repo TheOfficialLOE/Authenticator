@@ -24,7 +24,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
       // modeStorageKey="dark-mode-by-default"
       disableNestedContext
     >
-      <div id="dark-mode-by-default">
+      <div>
         <ModalProvider>
           <App/>
         </ModalProvider>

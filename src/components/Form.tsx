@@ -10,7 +10,7 @@ const isBase32 = (value: string) => {
   return regex.test(value);
 }
 
-const CodeForm = () => {
+const Form = () => {
   const {
     modalState,
     id,
@@ -23,10 +23,6 @@ const CodeForm = () => {
 
   const onFormSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    // if (name.length >= 20 || !isBase32(secret)) {
-    //   return;
-    // }
 
     if (name.length === 0) {
       toast.error("Name can't be empty.");
@@ -78,4 +74,4 @@ const CodeForm = () => {
   </form>
 };
 
-export default CodeForm;
+export default Form;
